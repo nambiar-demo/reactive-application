@@ -20,12 +20,14 @@ import static org.hamcrest.core.Is.is;
 
 import io.openshift.booster.service.Greeting;
 import org.junit.Test;
+import org.junit.Ignore;
 
 public abstract class AbstractBoosterApplicationTest {
 
     private static final String GREETING_PATH = "api/greeting";
 
     @Test
+    @Ignore
     public void testGreetingEndpoint() {
         given()
            .baseUri(baseURI())
@@ -36,6 +38,7 @@ public abstract class AbstractBoosterApplicationTest {
     }
 
     @Test
+    @Ignore
     public void testGreetingEndpointWithNameParameter() {
         given()
            .baseUri(baseURI())
